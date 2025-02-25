@@ -111,8 +111,46 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+
+
+CHALLENGE #1
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / (height * height) (mass in kg and height in meters).
+
+Your task is to write some code to help them:
+
+Store Mark's and John's mass and height in variables called massMark, heightMark, massJohn and heightJohn.
+
+Calculate both their BMIs using the formula, and store the results in two variables called BMIMark and BMIJohn.
+
+Log the value of BMIMark and BMIJohn to the console.
+
+BONUS: Create a boolean variable markHigherBMI containing information about whether Mark has a higher BMI than John. Log it to the console too
+
+TEST DATA 1: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 */
 
+// Going through challenge one. How Jonas would have done it. Compare to how YOU did it.
+
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+// This is where big difference is - you made these let because they would change. Jonas used const since knew would not be changing them. I saw 2 test values and assumed would want to accomodate for change down the line since this datatype isn't best for this type of problem anyway.
+
+const BMIMark = massMark / heightMark ** 2; // it bugs me that this is not camel case
+// There was a specific note on the challenge NOT to do this since the site would not accept it.
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI); // I logged this on a seperate line - silly oversight.
+
+/*
 //////////// Assignments Part1 ////////
 /// Values & Variables + let, const & var
 const country = "RSA";
@@ -150,3 +188,4 @@ const description =
   language;
 
 console.log(description);
+*/

@@ -128,4 +128,25 @@ let language;
 // let, const & var
 language = "Zulu";
 
-console.log(isIsland, population, country, language);
+// basic operators
+//1
+const populationHalved = population / 2;
+console.log(isIsland, population, country, language, populationHalved);
+
+//2
+console.log(population++);
+//3
+const finlandPopulation = 6000000;
+console.log(finlandPopulation < population);
+
+//4
+const description =
+  country +
+  " is in " +
+  continent +
+  ", and its " +
+  population +
+  " people speak " +
+  language;
+
+console.log(description);
